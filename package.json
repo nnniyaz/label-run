@@ -1,0 +1,33 @@
+{
+  "name": "@nnniyaz/label-run",
+  "version": "0.1.0",
+  "description": "Run shell commands sequentially with prefixed, colorized output",
+  "license": "MIT",
+  "author": "Niyaz Nassyrov",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "bin": {
+    "label-run": "./bin/label-run.js"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "keywords": [
+    "cli",
+    "spawn",
+    "prefix",
+    "color",
+    "runner",
+    "sequential",
+    "scripts"
+  ],
+  "files": ["bin", "src", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "test": "node bin/label-run.js --help",
+    "release:patch": "npm version patch && git push --follow-tags && npm publish --access public",
+    "release:minor": "npm version minor && git push --follow-tags && npm publish --access public",
+    "release:major": "npm version major && git push --follow-tags && npm publish --access public"
+  }
+}
